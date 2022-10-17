@@ -6,10 +6,26 @@
 // 782 -> 72
 // 918 -> 98
 
+// Классическое решение:
+// int num = new Random().Next(99,1000);
+// Console.WriteLine(num);
+
+// int firstDigit = num / 100;
+// int thirdDigit = num % 10;
+
+// Console.WriteLine($"{firstDigit}{thirdDigit}");
+
+// Решение через Method:
+
 int num = new Random().Next(99,1000);
 Console.WriteLine(num);
 
-int firstDigit = num / 100;
-int thirdDigit = num % 10;
+int NewNum(int num)
+{
+    int firstDigit = num / 100;
+    int thirdDigit = num % 10;
+    return firstDigit * 10 + thirdDigit;
+}
 
-Console.WriteLine($"{firstDigit}{thirdDigit}");
+int numberNew = NewNum(num);
+Console.WriteLine($"Получившееся число: {numberNew}");
