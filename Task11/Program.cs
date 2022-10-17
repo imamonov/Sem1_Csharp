@@ -20,7 +20,7 @@
 int num = new Random().Next(99,1000);
 Console.WriteLine(num);
 
-int NewNum(int num)
+int NewNum(int num2)
 {
     int firstDigit = num / 100;
     int thirdDigit = num % 10;
