@@ -26,6 +26,4 @@ int NewNum(int num2)
     int thirdDigit = num % 10;
     return firstDigit * 10 + thirdDigit;
 }
-
-int numberNew = NewNum(num);
-Console.WriteLine($"Получившееся число: {numberNew}");
+Console.WriteLine($"Получившееся число: {NewNum(num)}");
