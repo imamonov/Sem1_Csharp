@@ -6,18 +6,16 @@
 // 782 -> 8
 // 918 -> 1
 
-// Классическое решение (вариант 1):
+Console.WriteLine("Введите трехзначное число: ");
+int number = Convert.ToInt32(Console.ReadLine());
 
-// Console.WriteLine("Введите трехзначное число: ");
-// int number = Convert.ToInt32(Console.ReadLine());
+if (number < 0) number = -number;
 
-// if (number < 100 || number > 999) // надо подумать, что делать с трехзначными отрицательными числами
-//     Console.WriteLine("Введенное число не является трехзначным");
-// else
-// {
-//     int second_digit = number / 10 - number/100 * 10;
-//     Console.Write($"Вторая цифра числа {number} равна {second_digit}");
-// }
+    if (number < 100 || number > 999)
+        Console.WriteLine("Введенное число не является трехзначным");
 
-// Решение через Method (вариант 2):
-
+else
+{
+    int second_digit = number / 10 - number / 100 * 10;
+    Console.Write($"Вторая цифра числа number равна {second_digit}");
+}
