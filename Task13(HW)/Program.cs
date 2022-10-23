@@ -10,13 +10,14 @@
 
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
+int third_digit = 0;
 
-if (number % 2 == 0)
+if (number < 0) number = -number;
+if (number < 100) Console.WriteLine($"В заданном числе {number} отсутствует третья цифра");
+
+while (number < 99 || number > 1000)
 {
-    int third_digit = 
-    Console.WriteLine($"Третья цифра заданного числа {number} равна {third_digit}");
+    number = number / 10;
 }
-else
-{
-    Console.WriteLine($"В заданном числе {number} отсутсвует третья цифра");
-}
+third_digit = number % 10;
+Console.WriteLine($"Третья цифра числа => {third_digit}");
