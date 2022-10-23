@@ -15,7 +15,7 @@ int third_digit = 0;
 if (number < 0) number = -number;
 if (number < 100) Console.WriteLine($"В заданном числе {number} отсутствует третья цифра");
 
-while (number < 99 || number > 1000)
+while (number > 999)
 {
     number = number / 10;
 }
